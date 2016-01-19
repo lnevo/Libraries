@@ -51,7 +51,8 @@ int WaterLevelClass::Read(byte channel)
 	Wire.beginTransmission(I2CMultiWaterLevel);
 	Wire.write(1); // Config Pointer
 	byte addr=(0xb+channel)<<4; // Select which channel to read
-	addr+=0x03; // Programmable Gain
+	// addr+=0x03; // Programmable Gain
+	addr+=0x01; // Programmable Gain
 	Wire.write(addr);
 	Wire.write(0x83);
 	Wire.endTransmission();

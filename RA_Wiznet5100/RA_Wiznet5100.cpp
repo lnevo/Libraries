@@ -278,6 +278,12 @@ void RA_Wiznet5100::PortalConnect()
 	  PortalTimeOut=millis();
 }
 
+void RA_Wiznet5100::PortalConnectDirect()
+{
+	  PortalClient.connect(PortalServer, 80);
+	  PortalTimeOut=millis();
+}
+
 void RA_Wiznet5100::FirmwareConnect()
 {
 	  PortalClient.noblockconnect(WebWizardServer, 80);

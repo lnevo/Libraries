@@ -45,6 +45,7 @@ public:
 	unsigned long PortalTimeOut;
 	boolean FoundIP;
 	void PortalConnect();
+	void PortalConnectDirect();
 	void FirmwareConnect();
 	boolean FirmwareConnection;
 	boolean IsPortalConnected();
